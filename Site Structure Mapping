@@ -1,0 +1,48 @@
+/ (root)
+│── index.html                # Home Page
+│── about/                    
+│   ├── index.html            # About Us main page
+│   ├── story.html            # Our Story/Mission
+│   ├── impact.html           # Our Impact
+│   │     ├── sisterhood.html # Start Up Sisterhood
+│   │     ├── report.html     # Annual Report
+│   ├── news.html             # In the News
+│── events/                
+│   ├── index.html           # Events main page 
+│   ├── events.html          # Upcoming events //include drives
+│   ├── tea.html             # Tea and Tour
+│── getInvolved/             
+│   ├── index.html            # Get Involved main page
+│   ├── volunteer.html        # Volunteer with us 
+│   ├── host.html             # Host a Drive 
+│   ├── holiday.html          # Holiday Drives //maybe move to events
+│   ├── items.html            # Donate Gently Used Items
+│   ├── wishlist.html         # Shop our Amazon Wishlist
+│   ├── career.html           # Careers
+│   ├── partnership.html      # Partner with Us
+│── donate/                 
+│   ├── index.html            # Donate main page
+│── crisis/                     
+│   ├── index.html            # Crisis Help main page
+│   │   ├── connect.html      # Connect with us
+│── assets/                   # Static assets (CSS, JS, images)
+│   ├── css/
+│   │   ├── styles.css
+│   ├── js/
+│   │   ├── scripts.js
+│   ├── images/
+│── widgets/                  # UI components (e.g., number counter, flipping image link)
+│   ├── counter-widget.html
+│   ├── counter-widget.js
+│   ├── counter-widget.css
+│   ├── counter-widget.css
+│   ├── fliplink.html
+│   ├── fliplink.js
+│   ├── fliplink.css
+│   ├── fliplink.css
+│── accessibility/            
+│   ├── accessibility-toggle.html
+│   ├── accessibility-toggle.js
+│   ├── accessibility-report.md
+│── README.md                 # Project Overview
+│── .gitignore                # Git Ignore File
