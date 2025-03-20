@@ -1,24 +1,34 @@
 let count = 0;
-let counting; // Stores interval ID
+let counting
+const counterElement = document.getElementById("counter");
 
 function startCounting() {
-    if (counting) return; // Prevent multiple intervals
+    if (counting) return;
     counting = setInterval(() => {
+        if (count >= 100) {
+            clearInterval(counting); 
+            counting = null;
+            return;
+        }
         count++;
-        document.getElementById("counter").innerText = count;
-    }, 100); // Adjust speed if needed
+        counterElement.innerText = count;
+    }, 50);
 }
 
-// Stop counting when the button is released
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            startCounting();
+        } else {
+            stopCounting(); 
+        }
+    });
+}, { threshold: 0.5 });
+
+
+observer.observe(counterElement);
+
 function stopCounting() {
     clearInterval(counting);
     counting = null;
 }
-
-// Add event listeners when DOM loads
-document.addEventListener("DOMContentLoaded", () => {
-    const button = document.getElementById("count-button");
-    button.addEventListener("mousedown", startCounting);
-    button.addEventListener("mouseup", stopCounting);
-    button.addEventListener("mouseleave", stopCounting); // Stops if cursor leaves button
-});
